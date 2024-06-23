@@ -1,0 +1,103 @@
+.window {
+    display: grid;
+    grid-template-rows: 50px 150px 75px auto;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 50vh;
+    width: 40vw;
+    padding: 25px 25px 0px 25px;
+    overflow-y: auto;
+    max-height: auto;
+    border: 1px solid var(--dark-line);
+    background-color: var(--medium);
+}
+
+.log {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin-bottom: 25px;
+    border: 1px solid var(--dark-line);
+    background-color: var(--light);
+}
+
+.log-header {
+    display: flex;
+    align-items: center;
+}
+
+.header-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+    border: 1px solid var(--dark-line);
+    background: repeating-linear-gradient(45deg, var(--dark-line), var(--dark-line) 1px, transparent 1px, transparent 50%),
+        repeating-linear-gradient(-45deg, var(--dark-line), var(--dark-line) 1px, transparent 1px, transparent 50%);
+    background-color: white;
+}
+
+.header-image img {
+    height: 75%;
+}
+
+.header-headline {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12.5px;
+}
+
+.headline-lines {
+    display: flex;
+}
+
+.lines-top-line {
+    display: grid;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 5px;
+    height: 18.75px;
+    width: 200px;
+    margin-left: 12.5px;
+    background-color: var(--dark);
+}
+
+.lines-bottom-line {
+    display: grid;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 5px;
+    height: 18.75px;
+    width: 150px;
+    margin-left: 12.5px;
+    background-color: var(--dark);
+}
+
+.button {
+    display: flex;
+    align-self: last baseline;
+    justify-content: right;
+    height: 25px;
+    width: 50px;
+    margin: 0px 25px 25px 0px;
+    border: 1px solid var(--dark-line);
+    background-color: white;
+}
+
+.button:hover {
+    background-color: var(--dark);
+}

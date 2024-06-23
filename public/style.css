@@ -1,0 +1,113 @@
+:root {
+    --dark: #414141;
+    --medium: #AAAAAA;
+    --light: #DCDCDC;
+    --dark-line: #5D5D5D;
+    --light-line: #EFEFEF;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to top left, purple, yellow);
+}
+
+.app {
+    height: 90vh;
+    width: 65vw;
+    border: 1px solid var(--dark-line);
+    border-radius: 5px;
+    background:
+        repeating-linear-gradient(0deg, var(--light-line), var(--light-line) 1px, transparent 1px, transparent 25px),
+        repeating-linear-gradient(90deg, var(--light-line), var(--light-line) 1px, transparent 1px, transparent 25px);
+    background-color: white;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-line);
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--light);
+}
+
+.control {
+    height: 15px;
+    width: 15px;
+    margin-left: 10px;
+    background-color: #C8C8C8;
+    border-radius: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-line);
+    background-color: var(--medium);
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    margin: 0px 25px 0px 50px;
+    border: 1px solid var(--dark-line);
+    background: repeating-linear-gradient(45deg, var(--dark-line), var(--dark-line) 1px, transparent 1px, transparent 50%),
+        repeating-linear-gradient(-45deg, var(--dark-line), var(--dark-line) 1px, transparent 1px, transparent 50%);
+    background-color: white;
+}
+
+.headline {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12.5px;
+}
+
+.lines {
+    display: flex;
+}
+
+.top-line {
+    height: 43.75px;
+    width: 100px;
+    margin-left: 25px;
+    background-color: var(--dark);
+}
+
+.bottom-line {
+    height: 43.75px;
+    width: 125px;
+    margin-left: 25px;
+    background-color: var(--dark);
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--dark-line);
+    background-color: var(--light);
+}
+
+.bar-button {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 25px;
+    width: 50px;
+    margin: 0px 50px 0px 50px;
+    border: 1px solid var(--dark-line);
+    background-color: white;
+}
+
+.bar-button:hover {
+    background-color: var(--dark);
+}
+
+button img {
+    height: 100%;
+}

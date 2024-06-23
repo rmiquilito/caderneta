@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="app">
+            <div class="window">
+                <div class="tab">
+                    <div class="control"></div>
+                    <div class="control"></div>
+                    <div class="control"></div>
+                </div>
+
+                <div class="header">
+                    <div class="image">
+                        <img src="img/notepad.png">
+                    </div>
+
+                    <div class="headline">
+                        <div class="lines">
+                            <div class="top-line"></div>
+                            <div class="top-line"></div>
+                            <div class="top-line"></div>
+                        </div>
+                        <div class="lines">
+                            <div class="bottom-line"></div>
+                            <div class="bottom-line"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bar">
+                    <button type="button" class="bar-button" onclick="redirectHome()">
+                        <img src="img/home.png">
+                    </button>
+                    <button type="button" class="bar-button" onclick="redirectAuth()">
+                        <img src="img/out.png">
+                    </button>
+                </div>
+
+                <div class="content">
+                    <div class="box">
+                        <div class="info">
+                            <div class="info-image">
+                                <img src="img/user.png" class="img">
+                            </div>
+                            {{#user}}
+                            <div class="info-headline">
+                                <div class="headline-lines">
+                                    <div class="lines-line">{{name}}</div>
+                                </div>
+                                <div class="headline-lines">
+                                    <div class="lines-line">{{number}}</div>
+                                </div>
+                                <div class="headline-lines">
+                                    <div class="lines-line">{{address}}</div>
+                                </div>
+                            </div>
+                            {{/user}}
+                        </div>
+
+                        <div class="box-bar">
+                            <button type="button" class="button" onclick="redirectUserLogs()">
+                                <img src="img/list.png">
+                            </button>
+                            <button type="button" class="button" onclick="redirectUserOnlineEditor()">
+                                <img src="img/edit.png">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="info">
+                            <div class="info-image">
+                                <img src="img/customer.png" class="img">
+                            </div>
+
+                            <div class="info-content">
+                                <form action="/registerCustomer" method="post" class="form">
+                                    <div>
+                                        <input type="text" name="name" id="name" class="input" placeholder="Nome">
+                                    </div>
+                                    <div>
+                                        <input type="number" name="number" id="number" class="input"
+                                            placeholder="Número">
+                                    </div>
+                                    <div>
+                                        <input type="text" name="address" id="address" class="input"
+                                            placeholder="Endereço">
+                                    </div>
+
+                                    <button type="submit" class="button form-button">
+                                        <img src="img/sign.png">
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="box-bar">
+                            <button type="button" class="button" onclick="redirectCustomerLogs()">
+                                <img src="img/list.png">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="info">
+                            <div class="info-image">
+                                <img src="img/credit.png" class="img">
+                            </div>
+
+                            <div class="info-content">
+                                <form action="/registerCredit" method="post" class="form">
+                                    <div>
+                                        <input type="date" name="date" id="date" class="input">
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; border: 0px;"
+                                        class="input">
+                                        <input type="range" name="value" id="value" min="1" max="100">
+                                        <output for="value" id="output-value"></output>
+                                    </div>
+                                    <div>
+                                        <input type="text" name="customer" id="customer" class="input"
+                                            placeholder="Nome">
+                                    </div>
+
+                                    <button type="submit" class="button form-button">
+                                        <img src="img/sign.png">
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="box-bar">
+                            <button type="button" class="button" onclick="redirectCreditLogs()">
+                                <img src="img/list.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const value = document.querySelector("#output-value");
+        const input = document.querySelector("#value");
+        value.textContent = input.value;
+        input.addEventListener("input", (event) => {
+            value.textContent = event.target.value;
+        });
+    </script>
+    <script>
+        function redirectHome() {
+            window.location.href = 'http://localhost:3000/home'
+        }
+        function redirectAuth() {
+            window.location.href = 'http://localhost:3000/out'
+        }
+        function redirectCustomerLogs() {
+            window.location.href = 'http://localhost:3000/customerLogs'
+        }
+        function redirectUserLogs() {
+            window.location.href = 'http://localhost:3000/userLogs'
+        }
+        function redirectCreditLogs() {
+            window.location.href = 'http://localhost:3000/creditLogs'
+        }
+        function redirectUserOnlineEditor() {
+            window.location.href = 'http://localhost:3000/userOnlineEditor'
+        }   
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

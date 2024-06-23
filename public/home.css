@@ -1,0 +1,112 @@
+.window {
+    display: grid;
+    grid-template-rows: 50px 150px 75px auto;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+    margin: 50px 200px;
+}
+
+.box {
+    display: grid;
+    grid-template-rows: auto 25px;
+    border: 1px solid var(--dark-line);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.info-image {
+    display: flex;
+    justify-content: center;
+    margin: 25px 12.5px 25px 25px;
+    height: 50px;
+    border: 1px solid var(--dark-line);
+    border-radius: 5px;
+}
+
+.info-image img {
+    height: 100%;
+}
+
+.info-content {
+    border-top-right-radius: 5px;
+    margin: 25px 25px 25px 12.5px;
+}
+
+.info-headline {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 12.5px;
+    border-top-right-radius: 5px;
+    margin: 25px 25px 25px 12.5px;
+}
+
+.headline-lines {
+    display: flex;
+}
+
+.lines-line {
+    display: grid;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 5px;
+    height: 18.75px;
+    width: 150px;
+    background-color: var(--dark);
+}
+
+.box-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 25px 0px 25px;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 1px solid var(--dark-line);
+    background-color: var(--light);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 25px;
+    width: 50px;
+    border: 1px solid var(--dark-line);
+    background-color: white;
+}
+
+.button:hover {
+    background-color: var(--dark);
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    height: 100%;
+}
+
+.input {
+    height: 25px;
+    width: 100%;
+    border: 1px solid var(--dark-line);
+    background-color: white;
+}
+
+.form-button {
+    align-self: last baseline;
+    justify-self: right;
+}
